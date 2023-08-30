@@ -14,6 +14,8 @@
 		D4A6C6C52A9FC92900CBF206 /* KDWatchListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A6C6C42A9FC92900CBF206 /* KDWatchListTests.swift */; };
 		D4A6C6CF2A9FC92900CBF206 /* KDWatchListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A6C6CE2A9FC92900CBF206 /* KDWatchListUITests.swift */; };
 		D4A6C6D12A9FC92900CBF206 /* KDWatchListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A6C6D02A9FC92900CBF206 /* KDWatchListUITestsLaunchTests.swift */; };
+		D4A6C6E02A9FCB4900CBF206 /* KDWatchList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4A6C6DE2A9FCB4900CBF206 /* KDWatchList.xcdatamodeld */; };
+		D4A6C6E22A9FCD6A00CBF206 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A6C6E12A9FCD6A00CBF206 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		D4A6C6CA2A9FC92900CBF206 /* KDWatchListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KDWatchListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A6C6CE2A9FC92900CBF206 /* KDWatchListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDWatchListUITests.swift; sourceTree = "<group>"; };
 		D4A6C6D02A9FC92900CBF206 /* KDWatchListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDWatchListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4A6C6DF2A9FCB4900CBF206 /* KDWatchList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KDWatchList.xcdatamodel; sourceTree = "<group>"; };
+		D4A6C6E12A9FCD6A00CBF206 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				D4A6C6B52A9FC92800CBF206 /* ContentView.swift */,
 				D4A6C6B72A9FC92900CBF206 /* Assets.xcassets */,
 				D4A6C6B92A9FC92900CBF206 /* Preview Content */,
+				D4A6C6DE2A9FCB4900CBF206 /* KDWatchList.xcdatamodeld */,
+				D4A6C6E12A9FCD6A00CBF206 /* DataController.swift */,
 			);
 			path = KDWatchList;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				D4A6C6AC2A9FC92800CBF206 /* Sources */,
 				D4A6C6AD2A9FC92800CBF206 /* Frameworks */,
 				D4A6C6AE2A9FC92800CBF206 /* Resources */,
+				D4A6C6DD2A9FCA6B00CBF206 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -252,13 +259,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D4A6C6DD2A9FCA6B00CBF206 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint is not installed.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4A6C6AC2A9FC92800CBF206 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D4A6C6B62A9FC92800CBF206 /* ContentView.swift in Sources */,
+				D4A6C6E22A9FCD6A00CBF206 /* DataController.swift in Sources */,
 				D4A6C6B42A9FC92800CBF206 /* KDWatchListApp.swift in Sources */,
+				D4A6C6E02A9FCB4900CBF206 /* KDWatchList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +613,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D4A6C6DE2A9FCB4900CBF206 /* KDWatchList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D4A6C6DF2A9FCB4900CBF206 /* KDWatchList.xcdatamodel */,
+			);
+			currentVersion = D4A6C6DF2A9FCB4900CBF206 /* KDWatchList.xcdatamodel */;
+			path = KDWatchList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D4A6C6A82A9FC92800CBF206 /* Project object */;
 }

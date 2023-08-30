@@ -8,12 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var dramas: FetchedResults<Drama>
+    @State private var showingAddScreen = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                Section {
+                    Text("Count: \(dramas.count)")
+                } header: {
+                    Text("Watching")
+                        .font(.title2)
+                }
+                
+                Spacer()
+                
+                Section {
+                    Text("Count: \(dramas.count)")
+                } header: {
+                    Text("Plan to watch")
+                        .font(.title2)
+                }
+                
+                Spacer()
+                
+                Section {
+                    Text("Count: \(dramas.count)")
+                } header: {
+                    Text("Completed")
+                        .font(.title2)
+                }
+            }
         }
         .padding()
     }
